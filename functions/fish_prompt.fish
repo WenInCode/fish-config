@@ -31,9 +31,7 @@ function fish_prompt
         end
 
         function _is_hg_repo
-            type -q hg
-            or return 1
-            hg summary >/dev/null ^/dev/null
+            return 1
         end
 
         function _repo_branch_name
